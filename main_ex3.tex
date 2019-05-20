@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+ 
+\title{Exersice Sheet 3 (Solution)}
+\author{Muhammad Fahad Bin Ashraf, Shabi Turabi, Waleed Basit}
+\date{May 16}
+
+ % --- PACKAGES ---
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+ 
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath , amssymb , amsthm}
+\usepackage[utf8]{inputenc}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+
+\begin{document}
+ 
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\begin{enumerate}
+    \item Scatter plot and Accuracy
+    \begin{enumerate}
+        \item
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=10cm]{scatter_plot}
+        \end{figure}
+        Code for (a) and (b):\\
+        \lstinputlisting[language=Python]{scatter-plot.py}
+        \item The accuracy is 88.8889 which is better then sheet1 and sheet2
+    \end{enumerate}
+    \item Using Vowpal Wabbit
+    \begin{enumerate}
+        \item Covert training and test set to vw-format
+        \lstinputlisting[language=Python]{vw-formatter.py}
+        \pagebreak
+        \item Download and install Vowpal Wabbit
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=10cm]{vw_installed}
+        \end{figure}
+        \item Training on training data
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=10cm]{train_vw_on_training_data}
+        \end{figure} \\
+        \item Testing on training data \\
+        The average loss on our training dataset is: 0.247369
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=10cm]{test_vw_on_training_data}
+        \end{figure}
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
